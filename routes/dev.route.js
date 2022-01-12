@@ -1,24 +1,23 @@
 const router = require("express").Router();
-const { User } = require("../db/models");
+const { Delivery_man } = require("../db/models");
 const bcrypt = require("bcrypt");
 
 router.get("/", (req, res) => {
-    res.render("regUser");
+    res.render("reqDev");
 });
 
 router.post("/", async(req, res) => {
-    const { name, email, password, address } = req.body;
+    const { name, email, password } = req.body;
 
     try {
-        const user = await User.create({
+        const delivery = await Delivery_man.create({
             name,
             email,
             password: await bcrypt.hash(password, 10),
-            address,
         });
         return res.json({
             isSuccess: true,
-            user,
+            delivery,
         });
     } catch (error) {
         return res.json({
