@@ -3,7 +3,7 @@ const { Delivery_man } = require("../db/models");
 const bcrypt = require("bcrypt");
 
 router.get("/", (req, res) => {
-    res.render("reqDev");
+    res.render("regDev");
 });
 
 router.post("/", async(req, res) => {
