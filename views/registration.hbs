@@ -1,10 +1,8 @@
 <h1>Регистрация</h1>
 <form name="registrationForm" method="POST" action="/reg">
-  <label for="name"></label>
-  <input id="name" type="text" placeholder="Ваше имя" />
-  <label for="email"></label>
-  <input id="email" type="email" placeholder="Ваш e-mail" />
-  <label for="password"></label>
-  <input id="password" type="password" placeholder="Пароль" />
+  <input name="username" type="text" placeholder="Ваше имя" autofocus required/>
+  <input name="email" type="email" placeholder="Ваш e-mail" />
+  <input name="password" type="password" placeholder="Пароль" />
+  <input name="address" type="address" placeholder="Адрес" />
   <button type="submit">Зарегистрироваться</button>
 </form>
