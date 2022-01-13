@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 
 router.post("/:id", async (req, res) => {
   //находим текущего пользоватлея через секвалайз,где id достается из параметриз запроса
-  const currentUser = await User.findByPk(req.params.id, { raw: true });
+  const currentUser = await User.findByPk(req.session.user.id, { raw: true });
   //находим выбранное блюдо через секвалайз,где id достается из параметриз запроса
   const choosenDish = await Order.findByPk(req.params.id, { raw: true });
   // console.log(currentUser);
