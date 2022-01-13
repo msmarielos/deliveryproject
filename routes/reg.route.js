@@ -16,16 +16,11 @@ router.post("/", async(req, res) => {
             password: await bcrypt.hash(password, 10),
             address,
         });
-        return res.json({
-            isSuccess: true,
-            user,
-        });
+        return res.redirect('/login');
     } catch (error) {
-        return res.json({
-            isSuccess: false,
-            message: error.message || "Неудачная регистрация",
-        });
+        return res.redirect('/regerror');
     }
+
 });
 
 module.exports = router;

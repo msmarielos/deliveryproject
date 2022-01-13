@@ -4,7 +4,7 @@ document.registrationForm?.addEventListener("submit", async(event) => {
     const { method, action } = event.target;
 
     const body = {
-        name: event.target.username.value,
+        name: event.target.name.value,
         email: event.target.email.value,
         password: event.target.password.value,
         address: event.target.address.value,
