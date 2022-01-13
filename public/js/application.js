@@ -1,4 +1,4 @@
-document.registrationForm.addEventListener("submit", async(event) => {
+document.registrationForm?.addEventListener("submit", async(event) => {
     event.preventDefault();
 
     const { method, action } = event.target;
@@ -20,7 +20,7 @@ document.registrationForm.addEventListener("submit", async(event) => {
     const user = await response.json();
 });
 
-document.regDevForm.addEventListener("submit", async(event) => {
+document.regDevForm?.addEventListener("submit", async(event) => {
     event.preventDefault();
 
     const { method, action } = event.target;

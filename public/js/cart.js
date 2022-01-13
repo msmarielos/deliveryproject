@@ -1,7 +1,7 @@
 //нашли все кнопки по селектору
 const addToCart = document.querySelectorAll(".addToCart");
 //на кнопки вешаем слушателей,  в переменную кидаем id блюда(кнопка с аттрибутом-data.id)
-addToCart.forEach((button) => {
+addToCart?.forEach((button) => {
   button.addEventListener("click", async (e) => {
     e.preventDefault();
 
