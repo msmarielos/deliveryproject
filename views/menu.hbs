@@ -1,26 +1,14 @@
-
-<h1 class="big">Meet the Herd</h1>
-<ul id="table-horses" class="list">
-  {{#each menu}}
-    <li class="list-item col-1-2">
-       <a
-        class="big fancy-text light-link"
-      >{{this.dish}}</a>
-
-      <button class="addToCart" data-id="{{this.id}}">Купить</button>
-    
-    <ul class="list drop-down">
-    <li class="list-item col-1-3">
-        <h2>Name</h2>
-        <p>{{this.id}}</p>
-    </li>
-    <li class="list-item col-1-3">
-        <h2>Breed</h2>
-        <p>{{this.discount_price}}</p>
-    </li>
-</ul>
-    </li>
-     {{/each}}
+<div class="news"><span class="romb">⬥</span> Сегодня в Меню <span class="romb">⬥</span></div>
+  <div class="img-group1">
+    {{#each menu}}
+    <div>
+      <img src="{{this.photo_link}}" alt="">
+      <br><strong>{{this.dish}}</strong>
+      <br><strong>{{this.start_price}}</strong>
+      <br><strong>{{this.discount_price}}</strong>
+      <br><button class="login-button" class="addToCart" data-id="{{this.id}}">Купить</button></div>
+    {{/each}}
+  </div>
 
 
 

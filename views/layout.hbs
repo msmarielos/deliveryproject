@@ -6,20 +6,54 @@
     <title>Document</title>
     <script defer src="/js/application.js"></script>
     <script defer src="/js/cart.js"></script>
-
+  <link href="styles/style.css" rel="stylesheet"> 
   </head>
   <body>
-    <header>
+    <header class="top-menu">
+    <div class="name">
+       <p class="romb">⬥</p><p>KebabDelivery</p>
+      <div class="navbar-logo">
+        <img src="img/logo.png">
+      </div>
+    </div>
+    <ul class="menu-main">
+      <li><a href="/">Главная</a></li>
+      <li><a href=""></a></li>
+      <li><a href="/">Меню</a></li>
+      <li><a href=""></a></li>
       {{#if isAuthorized}}
-        <a href="/logout">Разлогин</a>
-        <p>Привет, !</p>
+      <li><a href="/cart">Корзина</a></li>
+      <li><a href=""></a></li>
+      <li><a href="/logout">Выйти</a></li>
+      <li><a href=""></a></li>
       {{else}}
-        <a href="/login">логин</a>
-        <a href="/reg">зарегься</a>
-        <p>ты не залогился, !</p>
+      <li><a href="/login">Войти</a></li>
+      <li><a href=""></a></li>
+      <li><a href="/reg">Регистрация</a></li>
+      <li><a href=""></a></li>
       {{/if}}
-    </header>
+    </ul>
+  </header>
+  {{#if isAuthorized}}
+{{else}}
+<div class="regImg">
+  <img src="img/regimg.png" alt="">
+  <div  class="regText">Пройди простую регистрацию <br>
+                  и наслаждайся нашим сервисом</div>
+  <img src="img/Courier.png" alt="">
+  </div>
+{{/if}}
     {{{body}}}
-
+    <div class="parent">
+  Доступные заказы:
+  <div class="maps">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9760cfbeecc2d4e9307829e5b99e5ab6d487fa15ac963afbc146a768631c3155&amp;width=734&amp;height=437&amp;lang=ru_RU&amp;scroll=true"></script>
+  </div>
+</div>
   </body>
+  <footer class="footer">
+<div class="copy">
+  © 2022-2023 KebabDelivery
+</div>
+</footer>
 </html>
