@@ -6,11 +6,13 @@
        <a
         class="big fancy-text light-link"
       >{{this.dish}}</a>
+
+      <button class="addToCart" data-id="{{this.id}}">Купить</button>
     
-    <ul class="list drop-down" style="display: none;">
+    <ul class="list drop-down">
     <li class="list-item col-1-3">
         <h2>Name</h2>
-        <p>{{this.start_price}}</p>
+        <p>{{this.id}}</p>
     </li>
     <li class="list-item col-1-3">
         <h2>Breed</h2>
