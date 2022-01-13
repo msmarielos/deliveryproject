@@ -14,13 +14,29 @@ router.post("/:id", async (req, res) => {
   const choosenDish = await Order.findByPk(req.params.id, { raw: true });
   // console.log(currentUser);
   //добавляем в БД
-  const cartUser = await Cart.create({
-    //заполняем поле таблицы
-    client_id: currentUser.id,
-    dish_id: choosenDish.id,
-    counter: 1,
+  const existingCart = await Cart.findOne({
+    where: { 
+      client_id: currentUser.id,
+      dish_id: choosenDish.id,
+    }
   });
-  await Cart.increment("counter");
+
+  if (!existingCart) {
+    const cartUser = await Cart.create({
+      //заполняем поле таблицы
+      client_id: currentUser.id,
+      dish_id: choosenDish.id,
+      counter: 1,
+    });
+
+    await cartUser.save();
+  } else {
+    existingCart.counter += 1;
+    await existingCart.save();
+  }
+  
+  res.status(200).json();
 });
 
 module.exports = router;
+ 
