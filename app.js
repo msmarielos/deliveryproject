@@ -2,6 +2,8 @@ const express = require("express");
 const config = require("./config/config");
 const regRouter = require("./routes/reg.route");
 const regDev = require("./routes/dev.route");
+const mainRouter = require("./routes/main.route");
+const cartRouter = require("./routes/cart.route");
 
 const app = express();
 
@@ -10,7 +12,9 @@ config(app);
 
 app.use("/reg", regRouter);
 app.use("/deli", regDev);
+app.use("/", mainRouter);
+app.use("/cart", cartRouter);
 
 app.listen(PORT, () => {
-    console.log("The server started on", PORT);
+  console.log("The server started on", PORT);
 });

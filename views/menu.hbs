@@ -1,0 +1,27 @@
+
+<h1 class="big">Meet the Herd</h1>
+<ul id="table-horses" class="list">
+  {{#each menu}}
+    <li class="list-item col-1-2">
+       <a
+        class="big fancy-text light-link"
+      >{{this.dish}}</a>
+
+      <button class="addToCart" data-id="{{this.id}}">Купить</button>
+    
+    <ul class="list drop-down">
+    <li class="list-item col-1-3">
+        <h2>Name</h2>
+        <p>{{this.id}}</p>
+    </li>
+    <li class="list-item col-1-3">
+        <h2>Breed</h2>
+        <p>{{this.discount_price}}</p>
+    </li>
+</ul>
+    </li>
+     {{/each}}
+
+
+
+
