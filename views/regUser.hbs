@@ -1,14 +1,40 @@
-<h1>Регистрация клиента</h1>
-<form name="registrationForm" method="POST" action="/reg">
-  <input
-    name="username"
-    type="text"
-    placeholder="Ваше имя"
-    autofocus
-    required
-  />
-  <input name="email" type="email" placeholder="Ваш e-mail" />
-  <input name="password" type="password" placeholder="Пароль" />
-  <input name="address" type="address" placeholder="Адрес" />
-  <button type="submit">Зарегистрироваться</button>
-</form>
+<div class="regpage">
+  <div class="registration">
+    ⬥
+<div class="pink">
+  <form method="post" action="/reg" class="login">
+    <div class="email">
+      <p>
+        <label for="address">Адрес:</label>
+        <input type="text" name="address" id="address" placeholder="Ваш адрес">
+      </p>
+    </div>
+    <div class="userName">
+      <p>
+        <label for="name">Имя:</label>
+        <input type="text" name="name" id="name" placeholder="  ваше имя">
+      </p>
+    </div>
+    <div class="login">
+      <p>
+        <label for="email">Электронная почта:</label>
+        <input type="email" name="email" id="email" placeholder="  придумайте логин">
+      </p>
+    </div>
+    <div class="password">
+      <p>
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" placeholder="  придумайте пароль">
+      </p>
+    </div>
+    
+        <p class="login-submit">
+          <button type="submit" class="login-button">Зарегистрироваться</button>
+        </p>
+    
+        <!-- <p class="forgot-password"><a href="index.html">Забыл пароль?</a></p> -->
+      </form>
+</div>
+⬥
+  </div>
+</div>
