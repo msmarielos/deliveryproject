@@ -15,15 +15,9 @@ router.post("/", async(req, res) => {
             email,
             password: await bcrypt.hash(password, 10),
         });
-        return res.json({
-            isSuccess: true,
-            delivery,
-        });
+        return res.json({url: '/logindel'});
     } catch (error) {
-        return res.json({
-            isSuccess: false,
-            message: error.message || "Неудачная регистрация",
-        });
+        return res.json({error: message.error});
     }
 });
 

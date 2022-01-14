@@ -16,10 +16,8 @@ router.post("/", async (req, res) => {
     req.session.user = user;
     req.session.isAuthorized = true;
     res.redirect("/");
-    // alert("Успешный вход!");
   } else {
     res.redirect("/");
-    // alert("неуспешный вход!");
   }
 });
 
