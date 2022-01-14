@@ -7,6 +7,7 @@ const cartRouter = require("./routes/cart.route");
 const loginRouter = require("./routes/login.route");
 const logouteRouter = require("./routes/logout.route");
 const todeliverRouter = require("./routes/to-deliver.route");
+const loginDelRouter = require('./routes/login.dev.route');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use("/cart", cartRouter);
 app.use("/login", loginRouter);
 app.use("/logout", logouteRouter);
 app.use("/todeliver", todeliverRouter);
+app.use("/logindel", loginDelRouter);
 
 app.listen(PORT, () => {
   console.log("The server started on", PORT);
