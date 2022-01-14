@@ -7,18 +7,18 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", async(req, res) => {
-    const { name, email, password, address } = req.body;
+  const { name, email, password, address } = req.body;
 
-    try {
-        const user = await User.create({
-            name,
-            email,
-            password: await bcrypt.hash(password, 10),
-            address,
-        });
+  try {
+    const user = await User.create({
+        name,
+        email,
+        password: await bcrypt.hash(password, 10),
+        address,
+      });
         return res.redirect('/login');
     } catch (error) {
-        return res.redirect('/regerror');
+        return res.json({error: message.error});
     }
 
 });
