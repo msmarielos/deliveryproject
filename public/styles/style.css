@@ -294,17 +294,18 @@ input {
   display: flex;
   margin: 20px;
   /* box-shadow: 3px 0 14px #5f3d66; */
-  border: 5px solid #8158c4;
-  border-radius: 33px;
+  border: 5px solid #e68b9ef5;
+  border-radius: 35px;
   align-items: center;
   justify-content:space-between;
   width: auto;
-  max-height: 200px;
+  max-height: 230px;
 }
 
 .regImg img {
   border-radius: 30px;
   height: 190px;
+  padding-top: 5px;
 }
 .regText {
   font-size: 35px;
