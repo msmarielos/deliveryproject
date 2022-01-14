@@ -12,7 +12,7 @@ module.exports = {
       updatedAt: new Date(),
      },
      {
-      dish: 'Индейка "по-Питрески"',
+      dish: 'Индейка "по-Питерски"',
       start_price: 600,
       discount_price: 300,
       location: 'spb',
