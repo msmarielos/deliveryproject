@@ -250,7 +250,7 @@ input {
   justify-content:space-around;
   position: relative;
   color: #8158c4;
-  text-align: end;
+  /* text-align: end; */
   font-size: 30px;
 }
 .romb{
@@ -286,6 +286,7 @@ input {
 
 .regImg {
   display: flex;
+  position: relative;
   margin: 20px;
   /* box-shadow: 3px 0 14px #5f3d66; */
   border-radius: 35px;
@@ -325,6 +326,7 @@ input {
   font-weight: bold;
   display: flex;
   text-align: center;
+  margin-top: 60px;
 }
 .maps {
   border-radius: 30px;
@@ -363,10 +365,11 @@ input {
 .buttonText {
   color: rgb(253, 243, 224);
   font-weight: bold;
+  transform: none;
 }
 
 .buttonDeli {
-  font-size: 12px;
+  font-size: 13px;
 }
 /* .work  {
   animation:slide 4.5s ease-in-out infinite alternate;
@@ -417,4 +420,3 @@ input {
   position: absolute;
   margin: 20px -113px -33px 50px;
 }
-
