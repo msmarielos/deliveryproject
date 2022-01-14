@@ -294,7 +294,7 @@ input {
   justify-content:space-between;
   width: auto;
   max-height: 230px;
-  background: #ecc78488 ;
+  background: #ecc78479 ;
   border-radius: 30px;
   animation: background 10s infinite alternate;
 }
@@ -306,7 +306,7 @@ input {
 }
 .regText {
   font-size: 35px;
-  color: #8158c4;
+  color: #8b67c5;
   font-weight: bold;
   display: flex;
   text-align: center;
@@ -410,25 +410,13 @@ input {
   font-size: 44px;
   z-index: 1;
   position: absolute;
-  margin: 20px 210px 75px 50px;
+  margin: 20px 214px 75px 55px;
+
 }
 .plus {
   color: rgb(255, 185, 79);
-  font-size: 64px;
+  font-size: 54px;
   z-index: -2;
   position: absolute;
   margin: 20px -113px -33px 50px;
-}
-
-
-.work {
-  display: flex;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-}
-.work a {
-  padding-left: 0px;
-  font-size: 13px;
-  transition:none;
 }
