@@ -4,12 +4,13 @@
     <div>
       <img src="{{this.photo_link}}" alt="">
       <br><strong>{{this.dish}}</strong>
-      <br><strong>{{this.start_price}}</strong>
-      <br><strong>{{this.discount_price}}</strong>
+      <br>Исходная цена: {{this.start_price}}
+      <br>Цена со скидкой: {{this.discount_price}}
       <br><button class="login-button js-add-to-cart" data-id="{{this.id}}">Купить</button>
       </div>
     {{/each}}
   </div>
+</div>
 
 
 

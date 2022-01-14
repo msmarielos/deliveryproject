@@ -1,0 +1,12 @@
+<div class="news"><span class="romb">⬥</span>Доступные для доставки заказы<span class="romb">⬥</span></div>
+  <div class="img-group1">
+    {{#each ordersByClient}}
+    <div>
+      <img src="{{this.Order.photo_link}}" alt="">
+      <strong>{{this.Order.dish}}</strong>
+      <br>Имя клиента: {{this.User.name}}
+      <br>Адрес: {{this.User.address}}
+      <br><button class="login-button js-delete-from-cart" data-id="{{menu.id}}">Доставить</button>
+      </div>
+    {{/each}}
+  </div>
