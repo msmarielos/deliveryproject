@@ -3,7 +3,7 @@ const { Order } = require("../db/models");
 
 router.get("/", async(req, res) => {
     const menu = await Order.findAll({ raw: true });
-    // console.log(menu);
+    console.log(menu);
     res.render("menu", {
         menu,
         isAuthorized: req.session.isAuthorized,
