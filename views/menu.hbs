@@ -1,0 +1,17 @@
+<div class="news"><span class="romb">⬥</span> Сегодня в Меню <span class="romb">⬥</span></div>
+  <div class="img-group1">
+    {{#each menu}}
+    <div>
+      <img src="{{this.photo_link}}" alt="">
+      <br><strong>{{this.dish}}</strong>
+      <br>Исходная цена: {{this.start_price}}
+      <br>Цена со скидкой: {{this.discount_price}}
+      <br><button class="login-button js-add-to-cart" data-id="{{this.id}}">Купить</button>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+
+
+
